@@ -58,7 +58,6 @@ public class Wordguess {
 
     public void run() {
         //set the word
-
         String playAgain = "";
         boolean restart = true;
         do {//making a new word, starting the number of guesses over
@@ -80,7 +79,7 @@ public class Wordguess {
                         numberOfGuesses++;
                         System.out.println("Too bad! You used " + numberOfGuesses + " guess.");
                         //checking if number of guesses is equal to three and breaking out if true
-                        if (numberOfGuesses == 3) {
+                        if (numberOfGuesses == 4) {
                             System.out.println("You lost.");
                             Arrays.fill(playerGuess, '_');
                             end = true;
@@ -95,9 +94,6 @@ public class Wordguess {
                         }
                     }
                 }
-
-
-
             } while (!end);
             System.out.println("Would you like to play again? Y/N?");
             //if the user does, loop back up to the top, if not, restart = true
